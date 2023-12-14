@@ -19,5 +19,3 @@ def upload_xl_sheet():
         elif event == "Submit":
             worksheet = xl_sheet()
             write_new_workbook(worksheet)
-
-upload_xl_sheet()
