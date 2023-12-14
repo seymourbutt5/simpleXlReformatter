@@ -13,5 +13,9 @@ class xl_sheet:
         self.price_column = get_column(17)
         self.category_column = get_column(7)
 
+    def print_self(self):
+        print(self.product_name_column)
+        print(self.price_column)
+        print(self.category_column)
 
 
