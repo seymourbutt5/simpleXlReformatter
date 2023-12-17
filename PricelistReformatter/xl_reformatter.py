@@ -17,5 +17,14 @@ def upload_xl_sheet():
             break
 
         elif event == "Submit":
-            worksheet = xl_sheet()
-            write_new_workbook(worksheet)
+            file_path = values["-IN-"]
+            if file_path:
+                worksheet = xl_sheet(file_path)
+                write_new_workbook(worksheet)
+            if not is_xlsx_file(file_path):
+                sg.popup("Not a valid file format.")
+            if not file_path:
+                sg.popup("Please select a file.")
+
+def is_xlsx_file(file_path):
+    return file_path.lower().endswith(".xlsx")

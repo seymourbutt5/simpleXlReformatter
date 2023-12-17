@@ -1,9 +1,9 @@
 from openpyxl import *
 from paths import *
 
-def get_column(column_head):   
+def get_column(column_head, file_path):   
     # Open the spreadsheet and get the first sheet
-    workbook = load_workbook(source_xl_file)
+    workbook = load_workbook(file_path)
     sheet = workbook.worksheets[0]  
        
     # Create a list to store the values 

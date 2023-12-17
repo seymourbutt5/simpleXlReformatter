@@ -2,10 +2,8 @@ import os
 import re
 from datetime import datetime
 
-# current date and time
+# current date and time, in digits only, to affix to file for 'random' name
 date_time = datetime.now()
-
-# using isoformat()
 string = date_time.isoformat()
 numeric_string = re.sub(r'\D', '', string)
 

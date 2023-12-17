@@ -14,7 +14,7 @@ def set_column(worksheet, header, column_data, column_num):
 
     print("Added " + header + " column to sheet.")
 
-def save_workbook(workbook, path):
+def save_workbook(workbook, destination_xl_file):
     workbook.save(destination_xl_file)
 
 def write_new_workbook(xl_sheet):
